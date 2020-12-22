@@ -1,0 +1,35 @@
+{
+  "name": "node-fastify-typescript-demo01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "postinstall": "npm run build",
+    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+    "start:watch": "nodemon",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix"
+  },
+  "keywords": [],
+  "author": "Sanya Thammawong",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.14",
+    "boom": "^7.3.0",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.9.2",
+    "fastify-decorators": "^3.7.1",
+    "knex": "^0.21.14",
+    "mongoose": "^5.11.8",
+    "pino": "^6.8.0",
+    "pino-pretty": "^4.3.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.1.3"
+  }
+}
